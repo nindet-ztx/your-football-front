@@ -1,0 +1,79 @@
+@corporate-color: #37003C;
+@corporate-color-active: #300035;
+@corporate-color-two: #FFFFFF;
+@corporate-color-two-active: #E1E1E1;
+@corporate-color-link: #6000ff;
+@corporate-color-link-active: #3c03ff;
+@corporate-text-shadow-link: 0 1px 1px #6000ffd4;
+@corporate-background-color: #37003C;
+@corporate-background-color-active: #300035;
+@corporate-background-color-two: rgba(115, 109, 111, 0.2);
+@corporate-background-color-two-active: rgba(40, 0, 45, 0.5);
+@corporate-box-shadow-line-bot: 0 3px 3px rgba(35, 0, 45, 0.5);
+@corporate-box-shadow-line-top: 0px -3px 3px rgba(35, 0, 45, 0.5);
+@corporate-box-shadow: 0px 0px 3px rgba(35, 0, 45, 0.75);
+@corporate-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.70);
+@corporate-text-shadow-copyright: 1px 1px 2px rgba(51, 51, 51, 0.5);
+@corporate-color-copyright: rgba(51, 51, 51, 0.5);
+@corporate-border: 1px solid rgba(0, 0, 0, 0.5);
+
+@user-default-color-rank: rgb(170, 85, 0);
+@user-default-text-shadow-rank: 0 1px 1px #e36d007d;
+@user-default-border-avatar: 1px solid rgba(0, 0, 0, 0.6);
+@user-default-box-shadow-avatar: 0 0 8px rgba(0, 0, 0, 0.8);
+
+
+@user-default-personal-border-avatar: 1px solid rgba(0, 0, 0, 0.6);
+@user-default-personal-box-shadow-avatar: 0 0 8px rgba(0, 0, 0, 0.8);;
+@user-default-personal-color-rank: #ffffff;
+@user-default-personal-text-rank-shadow: 1px 1px 2px rgba(0, 0, 0, 0.70);
+@user-default-personal-color-name: #ffffff;
+@user-default-personal-text-name-shadow: 1px 1px 2px rgba(0, 0, 0, 0.70);
+@user-default-personal-color-experience: #b629c3;
+@user-default-personal-background-color-experience: rgba(255, 255, 255, 0.8);
+
+@comments-color-text: #A5A4A4;
+@comments-color-text-active: #717070;
+@comments-border: 1px solid #a9a4a466;
+
+@post-body-title-color-text: #070707;
+@post-body-background-color: #FFFFFF;
+@post-body-color-text: #231423;
+
+@header-score-background-color: rgba(255, 255, 255, 0.3);
+@header-score-color: #000000c7;
+@header-score-text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+.flex-center() when (default()) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.double-line() when (default()) {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@font-face {
+  font-family:'Comfortaa-SemiBold';
+  src: local("Comfortaa-SemiBold"), url("../../fonts/Comfortaa-SemiBold.ttf");
+}
+
+@font-face {
+  font-family:'Comfortaa-Regular';
+  src: local("Comfortaa-Regular"), url("../../fonts/Comfortaa-Regular.ttf");
+}
+
+@font-face {
+  font-family:'Comfortaa-Light';
+  src: local("Comfortaa-Light"), url("../../fonts/Comfortaa-Light.ttf");
+}
+
+@font-face {
+  font-family:'Corporate';
+  src: local("Corporate"), url("../../fonts/Corporate.ttf");
+}

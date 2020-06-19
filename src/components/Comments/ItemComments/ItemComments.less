@@ -1,0 +1,118 @@
+@import '../../core/Common';
+
+.item-comments {
+  margin: 11px 14px;
+  border-radius: 14px;
+  padding-bottom: 5px;
+  background: @corporate-background-color-two;
+
+  .item-comments__user-info {
+    height: 40px;
+    display: grid;
+    grid-template-columns: 40px minmax(0, 1fr) 80px;
+    padding: 10px;
+    align-items: center;
+
+    .item-comments__tags {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .item-comments__username {
+      padding-left: 10px;
+
+      .item-comments__name {
+        font-size: 13px;
+        .double-line();
+        max-height: 42px;
+        max-width: 100%;
+        line-height: 15px;
+        color: @corporate-color-two;
+        text-shadow: @corporate-text-shadow;
+      }
+
+      .item-comments__rank {
+        color: @user-default-color-rank;
+        text-shadow: @user-default-text-shadow-rank;
+        line-height: 14px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .item-comments__text {
+    padding: 0 10px 10px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .item-comments__action {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 10px;
+    font-size: 14px;
+
+    .item-comments__action_reply {
+      color: @comments-color-text;
+      transition: 0.5s;
+      display: flex;
+      align-items: center;
+    }
+
+    .item-comments__action_reply:active {
+      color: @comments-color-text-active;
+    }
+
+    .item-comments__action_open {
+      .flex-center();
+      color: @comments-color-text;
+      transition: 0.5s;
+
+      .ico-reply {
+        margin-left: 5px;
+
+        img {
+          height: 10px;
+        }
+      }
+
+      .reply-open {
+        width: 18px;
+        height: 18px;
+        transform: rotate(180deg);
+        transition: 0.5s;
+        .flex-center();
+        padding-top: 2px;
+      }
+
+      .reply-close {
+        width: 18px;
+        height: 18px;
+        transition: 0.5s;
+        transform: rotate(0deg);
+        .flex-center();
+      }
+    }
+
+    .item-comments__action_open:active {
+      color: @comments-color-text-active;
+      transition: 0.25s;
+    }
+
+    .item-comments__action_like {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+
+      .item-comments__ico_like {
+        padding-left: 5px;
+        height: 25px;
+      }
+    }
+  }
+}
+
+.reply-list {
+  margin-top: 5px;
+  min-height: 20px;
+}

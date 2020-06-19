@@ -1,0 +1,48 @@
+@import '../../core/Common';
+
+.reply-comments {
+  margin: 0 10px;
+  padding-top: 5px;
+  border-top: @comments-border;
+
+  .reply-comments__user-info {
+    grid-template-columns: 25px minmax(0, 1fr) 80px;
+    display: grid;
+    align-items: center;
+    height: 25px;
+    padding: 5px 0;
+
+    .reply-comments__tags {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .reply-comments__username {
+      padding-left: 10px;
+
+      .reply-comments__name {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 13px;
+        line-height: 13px;
+        color: @corporate-color-two;
+        text-shadow: @corporate-text-shadow;
+      }
+
+      .reply-comments__rank {
+        color: @user-default-color-rank;
+        text-shadow: @user-default-text-shadow-rank;
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+  }
+
+  .reply-comments__text {
+    padding: 2px 5px 8px 15px;
+    font-size: 14px;
+  }
+}

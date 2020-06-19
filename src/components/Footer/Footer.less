@@ -1,0 +1,23 @@
+@import '../core/Common';
+@import '../core/Animation';
+
+.footer-ico {
+  padding-top: 5px;
+}
+
+.TabbarItem-no-active {
+  width: 100%;
+  height: 100%;
+  .flex-center();
+}
+
+.TabbarItem-active {
+  width: 100%;
+  height: 100%;
+  .flex-center();
+  -webkit-animation: corporate-background-animated 0.8s infinite;
+
+  svg {
+    -webkit-animation: ripple-ico 0.8s infinite;
+  }
+}

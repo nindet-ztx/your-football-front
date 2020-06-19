@@ -1,0 +1,55 @@
+@import './Common';
+
+:root {
+  --tabbar_active_icon: #A5A4A4;
+  --text_primary: @corporate-color-two;
+  --attach_picker_tab_active_background: @corporate-color;
+  --attach_picker_tab_active_text: @corporate-color;
+  --background_light: @corporate-background-color;
+  --background_page: @corporate-background-color;
+  --button_muted_foreground: @corporate-color;
+  --button_primary_background: @corporate-color;
+  --button_tertiary_foreground: @corporate-color;
+  --control_foreground: @corporate-color;
+  --header_alternate_background: @corporate-background-color;
+  --header_background: @corporate-color;
+  --im_attach_tint: @corporate-color;
+  --im_reply_sender_text: @corporate-color;
+  --im_reply_separator: @corporate-color;
+  --link_alternate: @corporate-color;
+  --tabbar_inactive_icon: #FFFFFF;
+  --background_content: @corporate-background-color;
+  --separator_common: @corporate-background-color;
+  --header_text: @corporate-color-two;
+  --header_tint: @corporate-color-two;
+}
+
+/** VK-UI */
+.PanelHeader {
+  box-shadow: @corporate-box-shadow-line-bot;
+}
+
+.Tabbar--android.Tabbar--shadow,
+.Tabbar {
+  box-shadow: @corporate-box-shadow-line-top;
+}
+
+.Tabbar--ios.Tabbar--shadow::before,
+.Tabbar--shadow::before {
+  height: 0;
+}
+
+.TabbarItem__icon,
+.TabbarItem__in {
+  width: 100%;
+  height: 100%;
+}
+
+.View__header {
+  left: 0;
+}
+
+.PanelHeader--ios,
+.PanelHeader__left{
+  padding-right: 0;
+}

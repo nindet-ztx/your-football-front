@@ -1,0 +1,108 @@
+@import '../core/Common';
+@import '../core/Animation';
+
+.profile {
+  font-family: Comfortaa-Regular, sans-serif;
+
+  .profile__progress-bar {
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: @user-default-personal-color-experience;
+    transition-property: width, background-color;
+    transition: 3s linear;
+  }
+
+  .profile__progress-striped {
+    position: relative;
+    height: 2px;
+    width: 100%;
+    background-color: @user-default-personal-background-color-experience;
+    transition: 0.4s linear;
+  }
+
+  .profile-info__layout {
+    height: 110px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 80px minmax(0, 1fr);
+    background: url("../../img/background-image-personal.png") no-repeat center;
+    background-size: 100%;
+    z-index: 20;
+
+    .profile-info__name {
+      max-height: 40px;
+      margin: auto 10px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 20px;
+
+      div {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-wrap: normal;
+      }
+    }
+
+    .profile-info__avatar {
+      .flex-center();
+
+      .profile-avatar-img {
+        img {
+          border: @user-default-personal-border-avatar;
+          box-shadow: @user-default-personal-box-shadow-avatar;
+        }
+      }
+    }
+
+    .profile-info__rank {
+      .flex-center();
+      margin: auto;
+      max-width: 100px;
+      text-align: center;
+      font-size: 16px;
+      line-height: 20px;
+      color: @user-default-personal-color-rank;
+    }
+  }
+
+  .profile__body {
+    background-image: url("../../img/background-image.png");
+    background-size: 100% 100%;
+    height: 50vh;
+
+    .profile__standard {
+      display: flex;
+      align-items: center;
+      height: 60px;
+      margin: 10px 13px;
+      padding: 0 22px;
+      background: @corporate-background-color-two;
+      line-height: 25px;
+      font-size: 16px;
+      opacity: 0.85;
+      transition: 0.5s;
+
+      .profile__standard-coins {
+        padding-left: 5px;
+        font-weight: 600;
+      }
+    }
+
+    .profile__standard:active {
+      transition: 0.2s;
+      background: @corporate-background-color-two-active;
+      opacity: 1;
+    }
+
+    .tags {
+      max-height: 25px;
+      max-width: 25px;
+      padding-left: 7px;
+
+      .tags__img {
+        height: 25px;
+        width: 25px;
+      }
+    }
+  }
+}

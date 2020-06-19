@@ -1,0 +1,43 @@
+@import '../core/Common';
+@import '../core/Animation';
+
+.news {
+  font-family: Comfortaa-Regular, sans-serif;
+
+  .news__tabs {
+    position: -webkit-sticky;
+    position: sticky;
+    display: flex;
+    padding-top: 5px;
+    top: 50px;
+    z-index: 20;
+    background-color: @corporate-background-color;
+    box-shadow: @corporate-box-shadow-line-bot;
+
+    .news__tabs-new{
+      position: absolute;
+      width: calc(50% - 35px);
+      height: 0;
+      border-right: 70px solid transparent;
+    }
+
+    .news__tabs-popular {
+      position: absolute;
+      right: 0;
+      width: calc(50% - 35px);
+      border-left: 70px solid transparent;
+    }
+
+    .news__tabs-text{
+      .flex-center();
+      height: 45px;
+      width: 50%;
+      font-size: 15px;
+      text-align: center;
+    }
+  }
+
+  .egg {
+    -webkit-animation: haus 1.5s alternate-reverse 5;
+  }
+}

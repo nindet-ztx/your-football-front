@@ -1,0 +1,44 @@
+@import '../core/Common';
+@import '../core/Animation';
+
+.welcome {
+  width: 100%;
+  min-height: calc(100vh - 150px);
+  display: grid;
+  grid-template-rows: 70% auto;
+  text-shadow: @corporate-text-shadow;
+  font-family: Comfortaa-Regula, sans-serif;
+  background-image: url("../../img/background-image.png");
+  background-size: 100% 100%;
+
+  .welcome-header {
+    .flex-center();
+    padding-bottom: 50px;
+    font-size: 36px;
+  }
+
+  .welcome-button {
+    .flex-center();
+    width: 215px;
+    height: 41px;
+    margin: 0 auto;
+    border: @corporate-border;
+    font-size: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.5);
+    background-color: @corporate-background-color;
+  }
+
+  .welcome-button:active {
+    background-color: @corporate-color-active;
+    color: @corporate-color-two-active;
+  }
+
+  .welcome-text {
+    max-width: 220px;
+    margin: 20px auto 0;
+    text-align: center;
+    font-size: 16px;
+    text-shadow: @corporate-text-shadow;
+  }
+}

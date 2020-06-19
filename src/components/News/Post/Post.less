@@ -1,0 +1,199 @@
+@import '../../core/Common';
+@import '../../core/Animation';
+
+.post {
+  padding-top: 10px;
+  margin-bottom: 15px;
+  background-color: @post-body-background-color;
+
+  .post__header {
+    height: auto;
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr) 80px;
+    margin: 0 10px;
+
+    .post__header-avatar {
+      display: flex;
+      align-items: center;
+
+      img {
+        border: @user-default-border-avatar;
+        box-shadow: @user-default-box-shadow-avatar;
+      }
+    }
+
+    .post__header-user {
+      margin: auto 4px auto 0;
+
+      .post__header-username {
+        .double-line();
+        max-height: 42px;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 21px;
+        color: @corporate-color;
+        text-shadow: @corporate-text-shadow;
+      }
+
+      .post__header-user-rank {
+        color: @user-default-color-rank;
+        text-shadow: @user-default-text-shadow-rank;
+        line-height: 17px;
+        font-size: 13px;
+      }
+    }
+
+    .post__tags {
+      display: flex;
+      margin-left: auto;
+    }
+  }
+
+  .post__body {
+
+    .post__body-title {
+      margin: 5px 10px;
+      color: @post-body-title-color-text;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: justify;
+      font-family: Comfortaa-SemiBold, sans-serif;
+    }
+
+    .post__body-photo {
+      width: 100%;
+
+      .post__body-photo-img {
+        max-width: 100%;
+      }
+    }
+
+    .post__body-description {
+      height: auto;
+      margin: 0 10px;
+      color: @post-body-color-text;
+      text-align: justify;
+      font-size: 14px;
+      line-height: 17px;
+      transition: 1s;
+      white-space: pre-line;
+    }
+
+    .post__body-description-open {
+      animation: openDescription 1s 1 alternate;
+      -webkit-animation: openDescription 1s 1 alternate;
+    }
+
+    .description-open__text {
+      display: none;
+    }
+
+    .description-close__text {
+      padding: 5px 10px 0;
+      width: 50%;
+      color: @corporate-color-link;
+      font-weight: 500;
+      font-size: 15px;
+      text-shadow: @corporate-text-shadow-link;
+    }
+
+    .description-close__text:active {
+      color: @corporate-color-link-active;
+    }
+  }
+
+  .post__footer {
+    padding: 5px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: @corporate-color;
+
+    .post__footer-copyright {
+      font-family: Comfortaa-Light, sans-serif;
+      margin: auto 0 auto 20px;
+      font-size: 14px;
+      color: @corporate-color-copyright;
+      text-shadow: @corporate-text-shadow-copyright;
+    }
+
+    .post__footer-comments {
+      text-align: center;
+
+      .post__footer-comments-wrap {
+        width: 50px;
+        height: 45px;
+        margin: auto;
+
+        .post__footer-comments-count {
+
+        }
+
+        .post__footer-comments-img {
+          transition: 0.5s;
+        }
+
+        .post__footer-comments-img:active {
+          transition: 0s;
+
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+
+    .post__footer-like {
+      display: flex;
+      align-items: center;
+      margin: 0 20px 0 auto;
+
+      .post__footer-like-img {
+        transition: 0.7s;
+      }
+
+      .post__footer-like-img:active {
+        transition: 0.1s;
+
+        .like {
+          transform: scale(1.03);
+        }
+      }
+
+      .post__footer-like-count {
+        margin-right: 8px;
+        font-size: 18px;
+      }
+
+      .loader-like {
+        position: relative;
+        display: inline-block;
+        width: 34px;
+        height: 34px;
+        border: 2px solid @corporate-color;
+        border-radius: 50%;
+        animation: spin 0.5s infinite linear;
+      }
+
+      .loader-download {
+        height: 40px;
+        width: 34px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .loader-download__speeding-wheel {
+        width: 22px;
+        height: 22px;
+        border: 2px solid @corporate-color;
+        border-radius: 50%;
+        border-left-color: transparent;
+        border-right-color: transparent;
+        animation: rotate-spin 575ms infinite linear;
+        -webkit-animation: rotate-spin 575ms infinite linear;
+      }
+    }
+  }
+}

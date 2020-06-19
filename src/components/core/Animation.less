@@ -1,0 +1,194 @@
+@import './Common';
+@import './Reset';
+
+@keyframes trip {
+  0% {
+    -webkit-filter: sepia(100%);
+    transform: scale(1.05);
+  }
+  10% {
+    filter: invert(75%);
+    transform: scale(1.07);
+  }
+  20% {
+    -webkit-filter: sepia(100%);
+    transform: scale(1.05);
+  }
+  30% {
+    filter: invert(75%);
+    transform: scale(1.07);
+  }
+
+  40% {
+    -webkit-filter: sepia(100%);
+    transform: scale(1.05);
+  }
+
+  50% {
+    filter: invert(75%);
+    transform: scale(1.07);
+  }
+
+  60% {
+    -webkit-filter: sepia(100%);
+    transform: scale(1.05);
+  }
+
+  70% {
+    filter: invert(75%);
+    transform: scale(1.07);
+  }
+
+  80% {
+    -webkit-filter: sepia(100%);
+    transform: scale(1.05);
+  }
+
+  90% {
+    filter: invert(75%);
+    transform: scale(1.07);
+  }
+
+  100% {
+    -webkit-filter: sepia(100%);
+    transform: scale(1.05);
+  }
+}
+
+.mode-allcash {
+  /* -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease; */
+  transition: all 2s ease;
+  -webkit-animation: trip 1s infinite linear;
+}
+
+@keyframes header-title-blur {
+  from {
+    text-shadow: 0 0 2px rgba(35, 0, 45, 0.86),
+    0 0 2px rgba(35, 0, 45, 0.86),
+    0 0 4px rgba(35, 0, 45, 0.86),
+    0 0 4px rgba(35, 0, 45, 0.86),
+    0 0 4px rgba(35, 0, 45, 0.86),
+    0 0 4px rgba(35, 0, 45, 0.86),
+    0 0 4px rgba(35, 0, 45, 0.86),
+    0 0 4px rgba(35, 0, 45, 0.86),
+    0 0 8px rgba(35, 0, 45, 0.86),
+    0 0 8px rgba(35, 0, 45, 0.86),
+    0 0 8px rgba(133, 0, 145, 0.86),
+    0 0 8px rgba(133, 0, 145, 0.86),
+    0 2px 6px rgba(133, 0, 145, 0.86),
+    0 2px 6px rgba(133, 0, 145, 0.86),
+    0 2px 6px rgba(133, 0, 145, 0.86),
+    0 2px 6px rgba(133, 0, 145, 0.86),
+      0 -2px 6px rgba(133, 0, 145, 0.86),
+      0 -2px 6px rgba(133, 0, 145, 0.86);
+  }
+}
+
+@keyframes openDescription {
+  0% {
+    opacity: 0.75;
+    max-height: 200px;
+  }
+
+  100% {
+    opacity: 1;
+    max-height: 5000px;
+  }
+}
+
+@-webkit-keyframes rotate-spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ripple-ico {
+  0% {
+    opacity: 1;
+  }
+  60% {
+    transform: scale(1.10);
+    opacity: 0.9;
+  }
+  75% {
+    transform: scale(1.04);
+    opacity: 0.6;
+  }
+  80% {
+    transform: scale(1.06);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes corporate-background-animated {
+  0% {
+    background-color: @corporate-background-color;
+  }
+  100% {
+    background-color: @corporate-color-active;
+  }
+}
+
+@keyframes haus {
+  0% {
+    text-shadow: 1px -1px 0 hsl(0, 0%, 0%),
+    -2px 2px 0 hsl(162, 90%, 16%),
+      3px -3px 0 hsl(302, 78%, 28%),
+    -4px 4px 0 hsl(353, 60%, 43%);
+    color: hsl(119, 100%, 60%);
+    transition: all 1s;
+    -webkit-filter: grayscale(10%);
+    transform: scaleY(1);
+  }
+  25% {
+    text-shadow: 1px -1px 0 hsl(57, 100%, 50%),
+      -2px -2px 0 hsl(232, 100%, 50%),
+    3px 3px 0 hsl(128, 100%, 50%),
+      -4px -4px 0 hsl(38, 100%, 50%);
+    color: hsl(12, 100%, 50%);
+    transition: all 1s;
+    -webkit-filter: invert(25%);
+    transform: scaleY(1.1);
+  }
+
+  50% {
+    text-shadow: 1px -1px 0 hsl(0, 0%, 100%),
+    -2px 2px 0 hsl(73, 100%, 62%),
+      3px -3px 0 hsl(277, 100%, 54%),
+      4px -4px 0 hsl(172, 100%, 50%);
+    color: hsl(3, 100%, 50%);
+    transition: all 1s;
+    -webkit-filter: saturate(50%);
+    transform: scaleY(1);
+  }
+
+  75% {
+    text-shadow: 1px 1px 0 hsl(67, 100%, 66%),
+    -2px 2px 0 hsl(217, 100%, 70%),
+    3px 3px 0 hsl(327, 100%, 52%),
+      -4px -4px 0 hsl(291, 100%, 63%);
+    color: hsl(119, 100%, 60%);
+    transition: all 1s;
+    -webkit-filter: sepia(75%);
+    transform: scaleY(0.9);
+  }
+
+  100% {
+    text-shadow: -1px 1px 0 hsl(177, 100%, 75%),
+      -2px -2px 0 hsl(356, 100%, 70%),
+      3px -3px 0 hsl(95, 100%, 69%),
+    4px 4px 0 hsl(249, 100%, 65%);
+    color: hsl(57, 100%, 50%);
+    transition: all 1s;
+    -webkit-filter: sepia(100%);
+    transform: scaleY(1);
+  }
+}

@@ -1,0 +1,63 @@
+@import '../../core/Common';
+@import '../../core/Animation';
+
+.progress-bar {
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: @user-default-personal-color-experience;
+  transition-property: width, background-color;
+  transition: 3s linear;
+}
+
+.progress-striped {
+  position: relative;
+  height: 2px;
+  width: 100%;
+  background-color: @user-default-personal-background-color-experience;
+  transition: 0.4s linear;
+}
+
+.personal-info__layout {
+  height: 110px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 80px minmax(0, 1fr);
+  background: url("../../../img/background-image-personal.png") no-repeat center;
+  background-size: 100%;
+  z-index: 20;
+
+  .personal-info__name {
+    max-height: 40px;
+    margin: auto 10px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+
+    div {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: normal;
+    }
+  }
+
+  .personal-info__avatar {
+    .flex-center();
+
+    .personal-avatar-img {
+      img {
+        border: @user-default-personal-border-avatar;
+        box-shadow: @user-default-personal-box-shadow-avatar;
+      }
+    }
+  }
+
+  .personal-info__rank {
+    .flex-center();
+    margin: auto;
+    max-width: 100px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 20px;
+    color: @user-default-personal-color-rank;
+  }
+}
